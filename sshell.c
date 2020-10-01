@@ -31,17 +31,7 @@ char** split(const char* str)
     args* = new char*[argc];
     for (int i = 0; i < strlen(str); ++i)
     {
-        if (str[i]==' ')
-        {
-            if (i!=start_previous)
-            {
-                if (strlen(token)!=0)
-                {
-                    argc++;
-                }
-            }
-        }
-        else
+        if (str[i]!=' ')
         {
             //apend str[i] (char) to token if not space
             char* token = strcat(token, (char[2]) { (char) str[i], '\0' } );
