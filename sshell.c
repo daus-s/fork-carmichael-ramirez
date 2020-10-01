@@ -18,13 +18,16 @@ char** split(const char* str)
     {
         if (str[i]==' ')
         {
-            if (i!=start_previous)
+
+            if (strlen(token)!=0)
             {
-                if (strlen(token)!=0)
-                {
-                    argc++;
-                }
+                argc++;
             }
+
+        }
+        else
+        {
+            char* token = strcat(token, (char[2]) { (char) str[i], '\0' } );
         }
     }
     //defintely wrong
